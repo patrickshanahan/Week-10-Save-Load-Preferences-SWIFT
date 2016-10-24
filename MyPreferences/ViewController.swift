@@ -29,7 +29,7 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
     
     //color
     var selectedcolor:String!
-    let pickerColor = ["White","Red","Yellow", "Blue"]
+    let pickerColor = ["White","Black","Purple", "Green"]
     @IBAction func btnLoad(sender: UIButton) {
         let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
         
@@ -46,21 +46,21 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
             var favoriteColorSelected = defaults.objectForKey("color") as! String
             let SelectedColor:Int = (pickerColor).indexOf(favoriteColorSelected)!
            
-            if (favoriteColorSelected=="While")
+            if (favoriteColorSelected=="White")
             {
                 self.view.backgroundColor = UIColor.whiteColor()
             }
-            if (favoriteColorSelected=="Red")
+            if (favoriteColorSelected=="Black")
             {
-                self.view.backgroundColor = UIColor.redColor()
+                self.view.backgroundColor = UIColor.blackColor()
             }
-            if (favoriteColorSelected=="Yellow")
+            if (favoriteColorSelected=="Purple")
             {
-                self.view.backgroundColor = UIColor.yellowColor()
+                self.view.backgroundColor = UIColor.purpleColor()
             }
-            if (favoriteColorSelected=="Blue")
+            if (favoriteColorSelected=="Green")
             {
-                self.view.backgroundColor = UIColor.blueColor()
+                self.view.backgroundColor = UIColor.greenColor()
             }
             
 
@@ -100,17 +100,17 @@ class ViewController: UIViewController,UIPickerViewDataSource,UIPickerViewDelega
         {
             self.view.backgroundColor = UIColor.whiteColor()
         }
-        if (selectedcolor=="Red")
+        if (selectedcolor=="Black")
         {
-             self.view.backgroundColor = UIColor.redColor()
+             self.view.backgroundColor = UIColor.blackColor()
         }
-        if (selectedcolor=="Yellow")
+        if (selectedcolor=="Purple")
         {
-             self.view.backgroundColor = UIColor.yellowColor()
+             self.view.backgroundColor = UIColor.purpleColor()
         }
-        if (selectedcolor=="Blue")
+        if (selectedcolor=="Green")
         {
-             self.view.backgroundColor = UIColor.blueColor()
+             self.view.backgroundColor = UIColor.greenColor()
         }
        
         return pickerColor[row]
